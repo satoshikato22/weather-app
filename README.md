@@ -1,80 +1,20 @@
-# React + TypeScript + Vite
+# 天気予報アプリ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+アプリを起動するには、ファイルをダウンロード後にターミナルでnpm installを実行し、必要なパッケージをダウンロードする必要があります。
+App.tsx内のAPIのURLはweatherapiのアカウントで取得したものに変更してください。
 
-Currently, two official plugins are available:
+##  アプリケーションの概要
+都市名を入力し、Get Weatherボタンを押下すると、現在の天気や温度の情報を出力されます。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img width="401" height="158" alt="image" src="https://github.com/user-attachments/assets/8b65ba1f-fb6e-41fe-974d-a141ea4f1494" />
 
-## React Compiler
+<img width="401" height="146" alt="image" src="https://github.com/user-attachments/assets/b86ccdcf-47db-4691-ad31-113f3eee8c44" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img width="392" height="264" alt="image" src="https://github.com/user-attachments/assets/4cc1f339-6f49-4315-85ca-0900e7b5c3b2" />
 
-## Expanding the ESLint configuration
+## URL
+npm run dev実行後、「http://localhost:5173/」にアクセス。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-```
-## アプリ起動時の注意点
-- アプリを起動するには、ファイルをダウンロード後にターミナルでnpm installを実行し、必要なパッケージをダウンロードする必要があります。
-- App.tsx内のAPIのURLはweatherapiのアカウントで取得したものに変更してください。
-
-```
+## 開発背景
+ReactとTypeScriptで開発をしたかったので作成しました。
